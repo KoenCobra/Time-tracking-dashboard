@@ -79,6 +79,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.attribution {
+  transform: translateY(-2.6rem);
+}
+
 body {
   flex-direction: column;
   background-color: hsl(226deg, 43%, 10%);
@@ -91,6 +95,9 @@ main {
   padding: 5rem 1.5rem;
 }
 
+.client-card {
+  margin-bottom: 2rem;
+}
 .client-card .top-section {
   display: flex;
   align-items: center;
@@ -122,6 +129,10 @@ main {
   position: relative;
   z-index: -1;
 }
+.client-card .bottom-section p:first-child,
+.client-card .bottom-section p:last-child {
+  color: #bababa;
+}
 .client-card .bottom-section::before {
   content: "";
   position: absolute;
@@ -130,27 +141,102 @@ main {
   transform: translateY(-3rem);
 }
 
-.activity-card {
-  margin-top: 1.5rem;
-}
-
-.work .img-background {
+.work .img-background, .self-care .img-background, .social .img-background, .exercise .img-background, .study .img-background, .play .img-background {
   background-color: hsl(15deg, 100%, 70%);
   border-radius: 18px;
   display: flex;
   justify-content: end;
   overflow-y: hidden;
 }
-.work .img-background img {
+.work .img-background img, .self-care .img-background img, .social .img-background img, .exercise .img-background img, .study .img-background img, .play .img-background img {
   padding-right: 1rem;
   transform: translateY(-0.8rem);
 }
-.work .info {
+.work .info, .self-care .info, .social .info, .exercise .info, .study .info, .play .info {
   padding: 1.5rem 1rem;
   background-color: hsl(235deg, 46%, 20%);
+  transform: translateY(-2.6rem);
+  border-radius: 18px;
 }
-.work .info .title, .work .info .hours {
+.work .info .title, .self-care .info .title, .social .info .title, .exercise .info .title, .study .info .title, .play .info .title, .work .info .hours, .self-care .info .hours, .social .info .hours, .exercise .info .hours, .study .info .hours, .play .info .hours {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.work .info .hours p, .self-care .info .hours p, .social .info .hours p, .exercise .info .hours p, .study .info .hours p, .play .info .hours p {
+  font-size: 1.7rem;
+}
+.work .info .hours .date, .self-care .info .hours .date, .social .info .hours .date, .exercise .info .hours .date, .study .info .hours .date, .play .info .hours .date {
+  font-size: 0.8rem;
+  color: lightgray;
+}
+
+.play {
+  transform: translateY(-0.8rem);
+}
+.play .img-background {
+  background-color: hsl(195deg, 74%, 62%);
+}
+.play .img-background img {
+  transform: translateY(-0.5rem);
+}
+
+.study {
+  transform: translateY(-1.5rem);
+}
+.study .img-background {
+  background-color: hsl(348deg, 100%, 68%);
+}
+.study .img-background img {
+  transform: translateY(-0.5rem);
+}
+
+.exercise {
+  transform: translateY(-2.3rem);
+}
+.exercise .img-background {
+  background-color: hsl(145deg, 58%, 55%);
+  position: relative;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.exercise .img-background::after {
+  content: "";
+  position: absolute;
+  background-color: hsl(145deg, 58%, 55%);
+  inset: 0;
+  transform: translateY(2.5rem);
+  border-radius: 0;
+}
+.exercise .img-background img {
+  transform: translateY(-0.1rem);
+}
+.exercise .info {
+  transform: translateY(-1.2rem);
+}
+
+.social {
+  transform: translateY(-1.6rem);
+}
+.social .img-background {
+  background-color: hsl(264deg, 64%, 52%);
+}
+.social .img-background img {
+  transform: translateY(-0.9rem);
+}
+.social .info {
+  transform: translateY(-3.9rem);
+}
+
+.self-care {
+  transform: translateY(-3.7rem);
+}
+.self-care .img-background {
+  background-color: hsl(43deg, 84%, 65%);
+}
+.self-care .img-background img {
+  transform: translateY(-0.85rem);
+}
+.self-care .info {
+  transform: translateY(-2rem);
 }/*# sourceMappingURL=style.css.map */

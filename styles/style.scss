@@ -21,4 +21,93 @@ $PaleBlue: hsl(236, 100%, 87%);
 $Font: "Rubik", sans-serif;
 
 body {
+ flex-direction: column;
+ background-color: $VeryDarkBlue;
+ font-family: $Font;
+ color: white;
+}
+
+main {
+ width: 100%;
+ padding: 5rem 1.5rem;
+}
+
+.client-card {
+ .top-section {
+  display: flex;
+  align-items: center;
+  border-radius: 18px;
+  background-color: $DesaturatedBlue;
+  padding: 1.5rem;
+
+  img {
+   height: 70px;
+   width: 70px;
+   border: 3px solid white;
+   border-radius: 50%;
+   margin-right: 1rem;
+  }
+
+  .report-name {
+   span {
+    color: lightgray;
+   }
+
+   .name {
+    font-size: 1.4rem;
+    color: darken(white, 10%);
+   }
+  }
+ }
+
+ .bottom-section {
+  background-color: $DarkBlue;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  position: relative;
+  z-index: -1;
+
+  &::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-color: $DarkBlue;
+   transform: translateY(-3rem);
+  }
+ }
+}
+
+.activity-card {
+ margin-top: 1.5rem;
+}
+
+.work {
+ .img-background {
+  background-color: $LightRedWork;
+  border-radius: 18px;
+  display: flex;
+  justify-content: end;
+  overflow-y: hidden;
+  img {
+   padding-right: 1rem;
+   transform: translateY(-0.8rem);
+  }
+ }
+
+ .info {
+  padding: 1.5rem 1rem;
+  background-color: $DarkBlue;
+  .title {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+
+  .hours {
+   @extend .title;
+  }
+ }
 }

@@ -96,7 +96,7 @@ main {
 }
 
 .client-card {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .client-card .top-section {
   display: flex;
@@ -141,21 +141,33 @@ main {
   transform: translateY(-3rem);
 }
 
+.stacked {
+  display: grid;
+}
+.stacked > * {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.work, .self-care, .social, .exercise, .study, .play {
+  margin-bottom: 4rem;
+}
 .work .img-background, .self-care .img-background, .social .img-background, .exercise .img-background, .study .img-background, .play .img-background {
   background-color: hsl(15deg, 100%, 70%);
   border-radius: 18px;
-  display: flex;
-  justify-content: end;
+  width: 100%;
   overflow-y: hidden;
+  z-index: -1;
+  transform: translateY(-2.3rem);
 }
 .work .img-background img, .self-care .img-background img, .social .img-background img, .exercise .img-background img, .study .img-background img, .play .img-background img {
   padding-right: 1rem;
+  margin-left: auto;
   transform: translateY(-0.8rem);
 }
 .work .info, .self-care .info, .social .info, .exercise .info, .study .info, .play .info {
   padding: 1.5rem 1rem;
   background-color: hsl(235deg, 46%, 20%);
-  transform: translateY(-2.6rem);
   border-radius: 18px;
 }
 .work .info .title, .self-care .info .title, .social .info .title, .exercise .info .title, .study .info .title, .play .info .title, .work .info .hours, .self-care .info .hours, .social .info .hours, .exercise .info .hours, .study .info .hours, .play .info .hours {
@@ -171,9 +183,6 @@ main {
   color: lightgray;
 }
 
-.play {
-  transform: translateY(-0.8rem);
-}
 .play .img-background {
   background-color: hsl(195deg, 74%, 62%);
 }
@@ -181,9 +190,6 @@ main {
   transform: translateY(-0.5rem);
 }
 
-.study {
-  transform: translateY(-1.5rem);
-}
 .study .img-background {
   background-color: hsl(348deg, 100%, 68%);
 }
@@ -191,52 +197,23 @@ main {
   transform: translateY(-0.5rem);
 }
 
-.exercise {
-  transform: translateY(-2.3rem);
-}
 .exercise .img-background {
   background-color: hsl(145deg, 58%, 55%);
-  position: relative;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.exercise .img-background::after {
-  content: "";
-  position: absolute;
-  background-color: hsl(145deg, 58%, 55%);
-  inset: 0;
-  transform: translateY(2.5rem);
-  border-radius: 0;
 }
 .exercise .img-background img {
   transform: translateY(-0.1rem);
 }
-.exercise .info {
-  transform: translateY(-1.2rem);
-}
 
-.social {
-  transform: translateY(-1.6rem);
-}
 .social .img-background {
   background-color: hsl(264deg, 64%, 52%);
 }
 .social .img-background img {
   transform: translateY(-0.9rem);
 }
-.social .info {
-  transform: translateY(-3.9rem);
-}
 
-.self-care {
-  transform: translateY(-3.7rem);
-}
 .self-care .img-background {
   background-color: hsl(43deg, 84%, 65%);
 }
 .self-care .img-background img {
   transform: translateY(-0.85rem);
-}
-.self-care .info {
-  transform: translateY(-2rem);
 }/*# sourceMappingURL=style.css.map */

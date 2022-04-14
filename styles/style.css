@@ -143,6 +143,7 @@ main {
 
 .stacked {
   display: grid;
+  transform: translateY(2.3rem);
 }
 .stacked > * {
   grid-column: 1/2;
@@ -216,4 +217,85 @@ main {
 }
 .self-care .img-background img {
   transform: translateY(-0.85rem);
+}
+
+@media (min-width: 1400px) {
+  main {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    gap: 1.3rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 13rem);
+  }
+  main .client-card {
+    grid-row: span 2;
+  }
+  main .stacked {
+    transform: translateY(2.3rem);
+    margin-bottom: 2.3rem;
+  }
+  main .client-card {
+    margin-bottom: 0;
+  }
+  main .client-card .top-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+  }
+  main .client-card .top-section img {
+    margin-bottom: 1rem;
+    height: 70px;
+    width: 70px;
+  }
+  main .client-card .top-section .report-name {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    padding-top: 0.5rem;
+  }
+  main .client-card .top-section .report-name span {
+    font-size: 0.7rem;
+  }
+  main .client-card .top-section .report-name .name {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  main .client-card .bottom-section {
+    flex-direction: column;
+  }
+  main .client-card .bottom-section p {
+    padding: 0.5rem 0;
+  }
+  main .client-card .bottom-section::before {
+    transform: translateY(-10rem);
+  }
+  main .work .info, main .play .info, main .study .info, main .exercise .info, main .social .info, main .self-care .info {
+    background-color: hsl(235deg, 46%, 20%);
+    border-radius: 18px;
+  }
+  main .work .info .title, main .play .info .title, main .study .info .title, main .exercise .info .title, main .social .info .title, main .self-care .info .title, main .work .info .hours, main .play .info .hours, main .study .info .hours, main .exercise .info .hours, main .social .info .hours, main .self-care .info .hours {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .work .info p, main .play .info p, main .study .info p, main .exercise .info p, main .social .info p, main .self-care .info p {
+    font-size: 1rem;
+  }
+  main .work .info img, main .play .info img, main .study .info img, main .exercise .info img, main .social .info img, main .self-care .info img {
+    width: 15px;
+  }
+  main .work .info .hours, main .play .info .hours, main .study .info .hours, main .exercise .info .hours, main .social .info .hours, main .self-care .info .hours {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1.2rem;
+  }
+  main .work .info .hours p, main .play .info .hours p, main .study .info .hours p, main .exercise .info .hours p, main .social .info .hours p, main .self-care .info .hours p {
+    font-size: 2.5rem;
+  }
+  main .work .info .hours .date, main .play .info .hours .date, main .study .info .hours .date, main .exercise .info .hours .date, main .social .info .hours .date, main .self-care .info .hours .date {
+    font-size: 0.8rem;
+    color: lightgray;
+  }
 }/*# sourceMappingURL=style.css.map */

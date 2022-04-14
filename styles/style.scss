@@ -92,6 +92,7 @@ main {
 
 .stacked {
  display: grid;
+ transform: translateY(2.3rem);
 
  & > * {
   grid-column: 1/2;
@@ -193,6 +194,100 @@ main {
   background-color: $SoftOrangeSelfCare;
   img {
    transform: translateY(-0.85rem);
+  }
+ }
+}
+
+@media (min-width: 1400px) {
+ main {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  gap: 1.3rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 13rem);
+
+  .client-card {
+   grid-row: span 2;
+  }
+
+  .stacked {
+   transform: translateY(2.3rem);
+   margin-bottom: 2.3rem;
+  }
+
+  .client-card {
+   margin-bottom: 0;
+
+   .top-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+
+    img {
+     margin-bottom: 1rem;
+     height: 70px;
+     width: 70px;
+    }
+
+    .report-name {
+     width: min-content;
+     padding-top: 0.5rem;
+     span {
+      font-size: 0.7rem;
+     }
+
+     .name {
+      font-size: 2rem;
+      line-height: 1.2;
+     }
+    }
+   }
+   .bottom-section {
+    flex-direction: column;
+    p {
+     padding: 0.5rem 0;
+    }
+
+    &::before {
+     transform: translateY(-10rem);
+    }
+   }
+  }
+
+  .work {
+   .info {
+    background-color: $DarkBlue;
+    border-radius: 18px;
+
+    .title {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+    }
+    p {
+     font-size: 1rem;
+    }
+
+    img {
+     width: 15px;
+    }
+
+    .hours {
+     flex-direction: column;
+     align-items: flex-start;
+     padding-top: 1.2rem;
+
+     p {
+      font-size: 2.5rem;
+     }
+     .date {
+      font-size: 0.8rem;
+      color: lightgray;
+     }
+    }
+   }
   }
  }
 }

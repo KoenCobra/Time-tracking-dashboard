@@ -83,6 +83,10 @@ select {
   transform: translateY(-2.6rem);
 }
 
+.divider {
+  display: none;
+}
+
 body {
   flex-direction: column;
   background-color: hsl(226deg, 43%, 10%);
@@ -137,6 +141,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: -1;
   background-color: hsl(235deg, 46%, 20%);
   transform: translateY(-3rem);
 }
@@ -238,6 +243,7 @@ main {
   }
   main .client-card {
     margin-bottom: 0;
+    position: relative;
   }
   main .client-card .top-section {
     flex-direction: column;
@@ -264,16 +270,36 @@ main {
   }
   main .client-card .bottom-section {
     flex-direction: column;
+    z-index: 1;
   }
   main .client-card .bottom-section p {
     padding: 0.5rem 0;
+    transition: all 250ms linear;
+  }
+  main .client-card .bottom-section p:hover {
+    cursor: pointer;
+    color: white;
   }
   main .client-card .bottom-section::before {
-    transform: translateY(-10rem);
+    display: none;
+  }
+  main .client-card .divider {
+    background-color: hsl(235deg, 46%, 20%);
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 5rem;
+    bottom: 30%;
   }
   main .work .info, main .play .info, main .study .info, main .exercise .info, main .social .info, main .self-care .info {
     background-color: hsl(235deg, 46%, 20%);
     border-radius: 18px;
+    transition: all 250ms linear;
+  }
+  main .work .info:hover, main .play .info:hover, main .study .info:hover, main .exercise .info:hover, main .social .info:hover, main .self-care .info:hover {
+    cursor: pointer;
+    background-color: #292f70;
   }
   main .work .info .title, main .play .info .title, main .study .info .title, main .exercise .info .title, main .social .info .title, main .self-care .info .title, main .work .info .hours, main .play .info .hours, main .study .info .hours, main .exercise .info .hours, main .social .info .hours, main .self-care .info .hours {
     display: flex;
@@ -286,10 +312,13 @@ main {
   main .work .info img, main .play .info img, main .study .info img, main .exercise .info img, main .social .info img, main .self-care .info img {
     width: 15px;
   }
+  main .work .info img:hover, main .play .info img:hover, main .study .info img:hover, main .exercise .info img:hover, main .social .info img:hover, main .self-care .info img:hover {
+    cursor: pointer;
+  }
   main .work .info .hours, main .play .info .hours, main .study .info .hours, main .exercise .info .hours, main .social .info .hours, main .self-care .info .hours {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 1.2rem;
+    padding-top: 1.3rem;
   }
   main .work .info .hours p, main .play .info .hours p, main .study .info .hours p, main .exercise .info .hours p, main .social .info .hours p, main .self-care .info .hours p {
     font-size: 2.5rem;

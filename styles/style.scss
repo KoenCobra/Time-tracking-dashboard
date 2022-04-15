@@ -24,6 +24,10 @@ $Font: "Rubik", sans-serif;
  transform: translateY(-2.6rem);
 }
 
+.divider {
+ display: none;
+}
+
 body {
  flex-direction: column;
  background-color: $VeryDarkBlue;
@@ -84,6 +88,7 @@ main {
    content: "";
    position: absolute;
    inset: 0;
+   z-index: -1;
    background-color: $DarkBlue;
    transform: translateY(-3rem);
   }
@@ -219,6 +224,7 @@ main {
 
   .client-card {
    margin-bottom: 0;
+   position: relative;
 
    .top-section {
     flex-direction: column;
@@ -246,13 +252,30 @@ main {
    }
    .bottom-section {
     flex-direction: column;
+    z-index: 1;
+
     p {
      padding: 0.5rem 0;
+     transition: all 250ms linear;
+     &:hover {
+      cursor: pointer;
+      color: white;
+     }
     }
 
     &::before {
-     transform: translateY(-10rem);
+     display: none;
     }
+   }
+
+   .divider {
+    background-color: $DarkBlue;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 5rem;
+    bottom: 30%;
    }
   }
 
@@ -260,6 +283,12 @@ main {
    .info {
     background-color: $DarkBlue;
     border-radius: 18px;
+    transition: all 250ms linear;
+
+    &:hover {
+     cursor: pointer;
+     background-color: lighten($DarkBlue, 10%);
+    }
 
     .title {
      display: flex;
@@ -272,12 +301,16 @@ main {
 
     img {
      width: 15px;
+
+     &:hover {
+      cursor: pointer;
+     }
     }
 
     .hours {
      flex-direction: column;
      align-items: flex-start;
-     padding-top: 1.2rem;
+     padding-top: 1.3rem;
 
      p {
       font-size: 2.5rem;

@@ -73,15 +73,24 @@ main {
   background-color: $DarkBlue;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.2rem 2rem;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   position: relative;
   z-index: -1;
 
-  p:first-child,
-  p:last-child {
-   color: darken(lightgray, 10%);
+  .option {
+   background-color: transparent;
+   text-align: left;
+   border: 0;
+   color: lightgray;
+   outline: none;
+   padding: 0.5rem 0;
+   transition: all 250ms linear;
+   &:hover {
+    cursor: pointer;
+    color: white;
+   }
   }
 
   &::before {
@@ -124,7 +133,7 @@ main {
  }
 
  .info {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   background-color: $DarkBlue;
   border-radius: 18px;
 
@@ -257,7 +266,12 @@ main {
     flex-direction: column;
     z-index: 1;
 
-    p {
+    .option {
+     background-color: transparent;
+     text-align: left;
+     border: 0;
+     color: lightgray;
+     outline: none;
      padding: 0.5rem 0;
      transition: all 250ms linear;
      &:hover {

@@ -127,15 +127,24 @@ main {
   background-color: hsl(235deg, 46%, 20%);
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.2rem 2rem;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   position: relative;
   z-index: -1;
 }
-.client-card .bottom-section p:first-child,
-.client-card .bottom-section p:last-child {
-  color: #bababa;
+.client-card .bottom-section .option {
+  background-color: transparent;
+  text-align: left;
+  border: 0;
+  color: lightgray;
+  outline: none;
+  padding: 0.5rem 0;
+  transition: all 250ms linear;
+}
+.client-card .bottom-section .option:hover {
+  cursor: pointer;
+  color: white;
 }
 .client-card .bottom-section::before {
   content: "";
@@ -172,7 +181,7 @@ main {
   transform: translateY(-0.8rem);
 }
 .work .info, .self-care .info, .social .info, .exercise .info, .study .info, .play .info {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   background-color: hsl(235deg, 46%, 20%);
   border-radius: 18px;
 }
@@ -276,11 +285,16 @@ main {
     flex-direction: column;
     z-index: 1;
   }
-  main .client-card .bottom-section p {
+  main .client-card .bottom-section .option {
+    background-color: transparent;
+    text-align: left;
+    border: 0;
+    color: lightgray;
+    outline: none;
     padding: 0.5rem 0;
     transition: all 250ms linear;
   }
-  main .client-card .bottom-section p:hover {
+  main .client-card .bottom-section .option:hover {
     cursor: pointer;
     color: white;
   }

@@ -204,6 +204,9 @@ main {
 }
 
 @media (min-width: 1400px) {
+ .attribution {
+  transform: translateY(0);
+ }
  main {
   width: 80%;
   margin: 0 auto;

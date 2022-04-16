@@ -234,7 +234,7 @@ main {
   transform: translateY(-0.85rem);
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 900px) {
   .attribution {
     transform: translateY(0);
   }
